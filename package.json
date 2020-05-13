@@ -1,0 +1,14 @@
+{
+  "name": "cbz-extractor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "adm-zip": "^0.4.14",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
