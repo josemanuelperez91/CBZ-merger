@@ -11,12 +11,20 @@ const getDirectories = (source) =>
     .map((dirent) => dirent.name);
 
 const directories = getDirectories(foldersPath);
-const newZip = new AdmZip();
 
 directories.forEach(function (directory) {
   const directoryPath = path.join(foldersPath, directory);
+
   const newZip = new AdmZip();
 
-  newZip.addLocalFolder(directoryPath);
+  const images = fs.readdirSync(directoryPath);
+
+  images.forEach(function (file) {
+    const filePath = path.join(directoryPath, file);
+
+    const imageData = fs.readFileSync(filePath);
+
+    newZip.addFile(file, imageData);
+  });
   newZip.writeZip(path.join(__dirname, 'zips', directory + '.cbz'));
 });
