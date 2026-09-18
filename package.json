@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "adm-zip": "^0.4.16",
+    "adm-zip": "^0.6.1",
     "path": "^0.12.7"
   },
   "devDependencies": {},
